@@ -26,14 +26,31 @@
         function kakaoLogin() {
             Kakao.Auth.login({
                 success: function (response) {
+
                     Kakao.API.request({
+
                         url: '/v2/user/me',
+
                         success: function (response) {
+
                             console.log(response)
+
+                            // alert('answer' + response)
+
+                            location.href='http://localhost:8080/next';
+
                         },
+
                         fail: function (error) {
+
                             console.log(error)
+
+                            // alert('mid error' + error)
+
+                            location.href="/index";
+
                         },
+
                     })
                 },
                 fail: function (error) {

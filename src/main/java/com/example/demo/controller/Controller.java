@@ -15,4 +15,6 @@ public class Controller {
     }
     @GetMapping("/login")
     public String login(){ return "/login";}
+    @GetMapping("/next")
+    public String next(){ return "/next";}
 }
