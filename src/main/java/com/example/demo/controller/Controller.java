@@ -11,13 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class Controller {
     @GetMapping("/index")
     public String index(){
-        return "index";
+        return "/index";
     }
     @GetMapping("/login")
     public String login(){ return "/login";}
-    @GetMapping("/next")
-    public String next(){return "/next";}
-    @GetMapping("/start")
-    public String start(){ return "/start";}
-
 }
