@@ -4,6 +4,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.net.InetAddress;
+
 @org.springframework.stereotype.Controller
 @Log4j2
 @RequiredArgsConstructor
@@ -17,4 +19,7 @@ public class Controller {
     public String login(){ return "/login";}
     @GetMapping("/next")
     public String next(){return "/next";}
+    @GetMapping("/start")
+    public String start(){ return "/start";}
+
 }
